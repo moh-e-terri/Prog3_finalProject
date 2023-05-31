@@ -1,0 +1,29 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.search{
+    -fx-text-fill:white;
+    -fx-font-size:15px;
+    -fx-background-color:black;
+}
+.btnCancel{
+    -fx-background-color:red;
+}
+.btnUpdata{
+        -fx-background-color:green;
+
+}
+.btnCreate{
+        -fx-background-color:blue;
+}
+
+.btnShow{
+        -fx-background-color:brown;
+        
+}
+

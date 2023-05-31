@@ -1,0 +1,22 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.label{
+   -fx-text-fill: rgb(184,148,255); 
+    
+    
+}
+
+
+.button{
+    -fx-background-color: rgb(77, 75 ,117);
+    -fx-text-fill: white; 
+}
+.contanier{
+  
+     -fx-background-color: rgb( 238,247 ,255);
+}

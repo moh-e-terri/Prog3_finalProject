@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="467.0" prefWidth="872.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PatientRegisterPageController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="467.0" prefWidth="497.0">
+         <children>
+            <ImageView fitHeight="467.0" fitWidth="503.0" layoutX="-2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/dashboardPatient.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="495.0" prefHeight="467.0" prefWidth="392.0">
+         <children>
+            <Label fx:id="userName" layoutX="47.0" layoutY="96.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Username ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="password" layoutX="47.0" layoutY="138.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Password">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="firstName" layoutX="47.0" layoutY="178.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="First Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lastName" layoutX="47.0" layoutY="213.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Last Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="age" layoutX="47.0" layoutY="250.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Age">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="role" layoutX="47.0" layoutY="389.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Role">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="email" layoutX="47.0" layoutY="282.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Email">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="gender" layoutX="47.0" layoutY="354.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Gender">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFirstName" layoutX="150.0" layoutY="179.0" onAction="#showFirstName" promptText="Enter Your First Name" />
+            <TextField fx:id="txtLastName" layoutX="150.0" layoutY="213.0" onAction="#showLastName" promptText="Enter Your Last Name" />
+            <TextField fx:id="txtAge" layoutX="150.0" layoutY="251.0" onAction="#showAge" promptText="Enter Your Age" />
+            <TextField fx:id="txtEmail" layoutX="150.0" layoutY="283.0" onAction="#showEmail" promptText="Enter Your Email" />
+            <TextField fx:id="txtPassword" layoutX="150.0" layoutY="139.0" onAction="#showPassword" promptText="Enter Your Password" />
+            <TextField fx:id="txtUserName" layoutX="150.0" layoutY="97.0" onAction="#showUserName" promptText="Enter Your User Name" />
+            <Label fx:id="enterYourInformation" layoutX="48.0" layoutY="35.0" styleClass="labelryi" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Enter Your Information">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnOk" layoutX="153.0" layoutY="422.0" mnemonicParsing="false" onAction="#showBtnOk" prefHeight="25.0" prefWidth="86.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="OK">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <RadioButton fx:id="radioMale" layoutX="150.0" layoutY="357.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="67.0" selected="true" styleClass="label" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Male">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="groupGender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioFemale" layoutX="225.0" layoutY="357.0" mnemonicParsing="false" styleClass="label" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Female" toggleGroup="$groupGender">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="radioAdmail" layoutX="150.0" layoutY="392.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="75.0" selected="true" styleClass="label" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Admin">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="groupRole" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioPatient" layoutX="225.0" layoutY="392.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="75.0" styleClass="label" stylesheets="@../../css/PatientRegisterPagestyle.css" text="patient" toggleGroup="$groupRole">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <Label fx:id="phone" layoutX="47.0" layoutY="317.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Phone">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPhone" layoutX="150.0" layoutY="318.0" onAction="#showPhone" promptText="Enter Your Phone" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

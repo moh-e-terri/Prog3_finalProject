@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="546.0" prefWidth="868.0" style="-fx-background-color: lightgray;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminDashboardPageController">
+    <stylesheets>
+        <URL value="@/css/admindashboardpage.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="25.0" layoutY="35.0" prefHeight="476.0" prefWidth="818.0" style="-fx-background-color: white; -fx-background-radius: 25px;">
+         <children>
+            <Button fx:id="btnCreatNewPatient" layoutX="303.0" layoutY="353.0" mnemonicParsing="false" onAction="#showbtnCreatNewPatient" prefHeight="31.0" prefWidth="151.0" stylesheets="@../../css/admindashboardpage.css" text="Creat new patient ">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btnCreate" />
+               </styleClass>
+            </Button>
+            <Button fx:id="btnUpdata" layoutX="166.0" layoutY="353.0" mnemonicParsing="false" onAction="#showbtnUpdata" prefHeight="31.0" prefWidth="128.0" stylesheets="@../../css/admindashboardpage.css" text="Updata patient ">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btnUpdata" />
+               </styleClass>
+            </Button>
+            <Button fx:id="btnShowAllBookedAppointments" layoutX="557.0" layoutY="94.0" mnemonicParsing="false" onAction="#ShowAllBookedAppointments" prefHeight="31.0" prefWidth="232.0" stylesheets="@../../css/admindashboardpage.css" text="Show All Booked Appointments">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btnCreate" />
+               </styleClass>
+            </Button>
+            <TableView fx:id="tableView" layoutX="37.0" layoutY="138.0" prefHeight="200.0" prefWidth="750.0">
+               <columns>
+                  <TableColumn fx:id="tvID" prefWidth="75.0" text="id" />
+                  <TableColumn fx:id="tvUserName" prefWidth="121.0" text="User Name" />
+                  <TableColumn fx:id="tvFirstName" prefWidth="107.0" text="First Name" />
+                  <TableColumn fx:id="tvLastName" prefWidth="100.0" text="Last Name" />
+                  <TableColumn fx:id="tvAge" prefWidth="52.0" text="Age" />
+                  <TableColumn fx:id="tvEmail" prefWidth="124.0" text="Email" />
+                  <TableColumn fx:id="tvGender" prefWidth="82.0" text="Genger" />
+                  <TableColumn fx:id="tvRole" prefWidth="88.0" text="Role" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnDelelte" layoutX="37.0" layoutY="353.0" mnemonicParsing="false" onAction="#showbtnDelelte" prefHeight="31.0" prefWidth="119.0" stylesheets="@../../css/admindashboardpage.css" text="Delete patient ">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btnCancel" />
+               </styleClass>
+            </Button>
+            <Button fx:id="btnShowAllFreeAppointment" layoutX="338.0" layoutY="94.0" mnemonicParsing="false" onAction="#ShowAllFreeAppointment" prefHeight="31.0" prefWidth="213.0" stylesheets="@../../css/admindashboardpage.css" text="Show All Free Appointments ">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btnUpdata" />
+               </styleClass>
+            </Button>
+            <Button fx:id="btnShowallRegisterdPatientsInTheSystem" layoutX="37.0" layoutY="94.0" mnemonicParsing="false" onAction="#ShowallRegisterdPatientsInTheSystem" prefHeight="31.0" prefWidth="296.0" stylesheets="@../../css/admindashboardpage.css" text="Show all Registerd Patients In The System">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btnCancel" />
+               </styleClass>
+            </Button>
+            <TextField fx:id="txtSearchInPatients" layoutX="175.0" layoutY="14.0" prefHeight="31.0" prefWidth="151.0" promptText="Enter your First Name" />
+            <Button fx:id="btnSearchInPatients" layoutX="37.0" layoutY="14.0" mnemonicParsing="false" onAction="#showSearchInPatients" stylesheets="@../../css/admindashboardpage.css" text="Search in patients">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btnShow" />
+               </styleClass></Button>
+            <Button fx:id="btnSearchInBookedAppointments" layoutX="37.0" layoutY="54.0" mnemonicParsing="false" onAction="#showSearchInBookedAppointments" prefHeight="31.0" prefWidth="232.0" stylesheets="@../../css/admindashboardpage.css" text="Search in booked appointments">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btnShow" />
+               </styleClass></Button>
+            <TextField fx:id="txtSearchinbookedappointments" layoutX="269.0" layoutY="54.0" onAction="#Searchinbookedappointments" prefHeight="31.0" prefWidth="179.0" promptText="Enter Your First Name" />
+            <Button fx:id="btnLogout" layoutX="668.0" layoutY="353.0" mnemonicParsing="false" onAction="#showLogout" prefHeight="31.0" prefWidth="119.0" style="-fx-text-fill: white;" styleClass="btnCancel" stylesheets="@../../css/admindashboardpage.css" text="logout">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="43.0" style="-fx-text-fill: white;" text="Admin Dashboard">
+         <font>
+            <Font name="System Italic" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

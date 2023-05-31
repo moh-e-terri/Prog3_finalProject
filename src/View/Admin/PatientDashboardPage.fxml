@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1050.0" style="-fx-background-color: lightgray;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PatientDashboardPageController">
+   <stylesheets>
+      <URL value="@/css/admindashboardpage.css" />
+   </stylesheets>
+   <children>
+      <AnchorPane layoutX="21.0" layoutY="63.0" prefHeight="613.0" prefWidth="1008.0" style="-fx-background-color: white; -fx-background-radius: 25px;">
+         <children>
+            <TableView fx:id="freeTableView" layoutX="28.0" layoutY="60.0" prefHeight="207.0" prefWidth="711.0">
+               <columns>
+                  <TableColumn fx:id="idCol" prefWidth="63.0" text="ID" />
+                  <TableColumn fx:id="appDateCol" prefWidth="222.0" text="Appointment Date" />
+                  <TableColumn fx:id="appDayCol" prefWidth="161.0" text="Appointment Day" />
+                  <TableColumn fx:id="appTimeCol" prefWidth="169.0" text="Appointment Time" />
+                  <TableColumn fx:id="statusCol" minWidth="0.0" prefWidth="95.0" text="Status" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnShowAllBookedWaitingAppointments" layoutX="28.0" layoutY="547.0" mnemonicParsing="false" onAction="#ShowAllBookedWaitingAppointments" prefHeight="36.0" prefWidth="357.0" stylesheets="@../../css/admindashboardpage.css" text="Show My Booked Waiting Appointments">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btnCreate" />
+               </styleClass>
+            </Button>
+            <Button fx:id="btnShowAllAppointments" layoutX="764.0" layoutY="185.0" mnemonicParsing="false" onAction="#ShowAllFreeAppointments" prefHeight="36.0" prefWidth="219.0" stylesheets="@../../css/admindashboardpage.css" text="Show All Free Appointments " textAlignment="CENTER">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btnCancel" />
+               </styleClass>
+            </Button>
+            <Button fx:id="btnShowAllBookedFinishedAppointments" layoutX="625.0" layoutY="547.0" mnemonicParsing="false" onAction="#ShowAllBookedFinishedAppointments" prefHeight="36.0" prefWidth="357.0" stylesheets="@../../css/admindashboardpage.css" text="Show My Booked Finished Appointments">
+               <styleClass>
+                  <String fx:value="search" />
+                  <String fx:value="btnCreate" />
+               </styleClass>
+            </Button>
+            <Button fx:id="btnBookedApp" layoutX="764.0" layoutY="231.0" mnemonicParsing="false" onAction="#bookAppointment" prefHeight="36.0" prefWidth="219.0" stylesheets="@../../css/admindashboardpage.css" text="Book an Appointment">
+               <styleClass>
+                  <String fx:value="btnUpdata" />
+                  <String fx:value="search" />
+               </styleClass>
+            </Button>
+            <TableView fx:id="bookedTableView" layoutX="28.0" layoutY="330.0" prefHeight="199.0" prefWidth="954.0">
+               <columns>
+                  <TableColumn fx:id="idBookedCol" prefWidth="58.0" text="ID" />
+                  <TableColumn fx:id="userIdCol" prefWidth="161.0" text="User_ID" />
+                  <TableColumn fx:id="appIdCol" prefWidth="166.0" text="Appointment_ID" />
+                  <TableColumn fx:id="statusBookedCol" prefWidth="170.0" text="Status" />
+                  <TableColumn fx:id="docCommentCol" minWidth="0.0" prefWidth="398.0" text="Doctor Comment" />
+               </columns>
+            </TableView>
+            <Label layoutX="310.0" layoutY="26.0" prefHeight="21.0" prefWidth="167.0" text="All Free Appointments" textAlignment="CENTER" textFill="#a1a1a1">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="411.0" layoutY="296.0" prefHeight="21.0" prefWidth="186.0" text="All Booked Appointments" textAlignment="CENTER" textFill="#a1a1a1">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="764.0" layoutY="60.0" prefHeight="36.0" prefWidth="219.0" style="-fx-background-color: #eee;" text="                   Welcom" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="764.0" layoutY="96.0" prefHeight="36.0" prefWidth="50.0" style="-fx-background-color: #eee;" text="  UN :">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label fx:id="lablePatientUN" layoutX="814.0" layoutY="96.0" prefHeight="36.0" prefWidth="169.0" style="-fx-background-color: #eee;" textAlignment="CENTER" />
+            <Label fx:id="lablePatientID" layoutX="814.0" layoutY="132.0" prefHeight="36.0" prefWidth="169.0" style="-fx-background-color: #eee;" textAlignment="CENTER" />
+            <Label layoutX="764.0" layoutY="132.0" prefHeight="36.0" prefWidth="50.0" style="-fx-background-color: #eee;" text="  ID :">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="411.0" layoutY="14.0" style="-fx-text-fill: white;" text="Patient Dashboard">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnLogout" layoutX="909.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" prefHeight="36.0" prefWidth="98.0" style="-fx-text-fill: white;" styleClass="btnCancel" stylesheets="@../../css/admindashboardpage.css" text="logout">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="386.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PatientLoginPageController">
+   <children>
+      <AnchorPane prefHeight="378.0" prefWidth="398.0">
+         <children>
+            <ImageView fitHeight="388.0" fitWidth="405.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/loginPatient.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="385.0" prefHeight="388.0" prefWidth="398.0">
+         <children>
+            <AnchorPane layoutX="40.0" layoutY="55.0" prefHeight="295.0" prefWidth="333.0">
+               <children>
+                  <TextField fx:id="txtUserName" layoutX="29.0" layoutY="106.0" prefHeight="42.0" prefWidth="275.0" promptText="Username" />
+                  <TextField fx:id="txtPassword" layoutX="29.0" layoutY="167.0" prefHeight="42.0" prefWidth="275.0" promptText="Password" />
+                  <Button fx:id="btnLogin" layoutX="110.0" layoutY="235.0" mnemonicParsing="false" onAction="#patientLogin" prefHeight="36.0" prefWidth="115.0" stylesheets="@../../css/style.css" text="Login">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                  <Label layoutX="107.0" layoutY="14.0" prefHeight="40.0" prefWidth="121.0" stylesheets="@../../css/style.css" text="Welcome">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.root {
+    -fx-background-color: #ECECEC;
+}
+
+#rootPane {
+    -fx-padding: 20;
+}
+
+.top {
+    -fx-background-color: #FFD700;
+    -fx-alignment: center;
+}
+
+.bottom {
+    -fx-alignment: center;
+}
+
+.button {
+    -fx-background-color: #F08080;
+    -fx-text-fill: white;
+}
+
+.label {
+    -fx-font-size: 14;
+}
+
+.list-view {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 5;
+    -fx-font-size: 14;
+}
+
+.image-view {
+    -fx-fit-width: 50;
+    -fx-fit-height: 50;
+}

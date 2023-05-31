@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 13, 2023, 12:32:13 PM
+    Author     : HP
+*/
+.label{
+    -fx-text-fill: rgb(93,145,255);
+}
+.image{
+    -fx-background-radius: 20px;
+    
+}
+
+.parent{
+    -fx-background-color: rgb(242,245,255);
+      -fx-background-radius: 20px;
+}
+.login{
+     
+     -fx-background-color: rgb(242,245,255);
+      
+}
+
+.button{
+         -fx-text-fill : rgb(242,245,255);
+    -fx-background-color:  rgb(19,95,255);
+   
+}
